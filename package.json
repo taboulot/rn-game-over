@@ -5,5 +5,8 @@
   "main": "index.js",
   "repository": "git@github.com:taboulot/rn-game-over.git",
   "author": "Clément <clement-taboulot@hotmail.fr>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "shelljs": "^0.8.3"
+  }
 }
