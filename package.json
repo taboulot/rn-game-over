@@ -1,6 +1,6 @@
 {
   "name": "rn-game-over",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React Native kill me. Give me an other life.",
   "main": "index.js",
   "repository": "git@github.com:taboulot/rn-game-over.git",
