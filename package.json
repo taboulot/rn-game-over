@@ -1,0 +1,9 @@
+{
+  "name": "rn-game-over",
+  "version": "1.0.0",
+  "description": "React kill me. Give me an other life.",
+  "main": "index.js",
+  "repository": "git@github.com:taboulot/rn-game-over.git",
+  "author": "Clément <clement-taboulot@hotmail.fr>",
+  "license": "MIT"
+}
