@@ -30,7 +30,6 @@ shell.exec(" ./android/gradlew clean");
 shell.rm("-rf", "./android/build");
 shell.rm("-rf", "./android/app/build");
 shell.rm("android/.idea/modules.xml");
-shell.rm("android/.idea/modules.xml");
 shell.find("android").filter(function(file) {
   if (file.match(/\.iml$/)) {
     shell.rm(file);
