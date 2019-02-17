@@ -1,7 +1,7 @@
 const shell = require("shelljs");
 
 module.exports = function() {
-  console.log("\n## iOS clean ##".ios);
+  console.log("\n## iOS clean ##".bold.underline.ios);
 
   console.log("\n* rm -rf ~/Library/Developer/Xcode/DerivedData/*".ios);
   shell.rm("-rf", "~/Library/Developer/Xcode/DerivedData/*");

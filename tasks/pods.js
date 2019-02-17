@@ -1,7 +1,7 @@
 const shell = require("shelljs");
 
 module.exports = function() {
-  console.log("## Pods clean ##".pods);
+  console.log("## Pods clean ##".bold.underline.pods);
 
   shell.cd("ios");
 

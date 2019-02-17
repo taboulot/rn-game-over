@@ -1,7 +1,7 @@
 const shell = require("shelljs");
 
 module.exports = function() {
-  console.log("\n## Android clean ##".android);
+  console.log("\n## Android clean ##".bold.underline.android);
 
   console.log("\n* ./android/gradlew clean".android);
   shell.exec(" ./android/gradlew clean");

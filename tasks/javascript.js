@@ -1,7 +1,7 @@
 const shell = require("shelljs");
 
 module.exports = function() {
-  console.log("## Javascript clean ##".javascript);
+  console.log("## Javascript clean ##".bold.underline.javascript);
 
   console.log("\n* watchman watch-del-all".javascript);
   shell.exec("watchman watch-del-all", { async: false });

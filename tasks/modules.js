@@ -1,7 +1,7 @@
 const shell = require("shelljs");
 
 module.exports = function() {
-  console.log("## Javascript clean ##".modules);
+  console.log("## Javascript clean ##".bold.underline.modules);
 
   console.log("\n* rm -rf node_modules".modules);
   shell.exec("rm -rf node_modules", { async: false });
