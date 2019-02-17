@@ -1,27 +1,60 @@
 # rn-game-over
 
+> React Native kill me. Give me an other life.
+
 Have you ever been in this situation when changes that you made in your code, are not considered by RN in your simulator 🧐
 
 You tried everything : delete RN cache, ios build, android build...
 
 It generally works but you don't really know why and which command was the winner.
 
-This package is just a script that do a set of commands for you 🤩 and save your time 🕔
+This package is just a script that run a set of commands for you 🤩 and save your time 🕔
+
+## Usage
+
+![help](doc/help.png)
 
 ## Install
 
-```
-npm install -g rn-game-over
-```
-
-## Command line use
+With npm, run
 
 ```
-rn-game-over
+$ npm install -g rn-game-over
 ```
 
-## ⚠️ Precisions
+## Options descriptions
 
-This repository is experimental. Some errors may occur but script will continue until the end.
+- `-o`:
 
-The output is not really clear but it show you what is going on.
+  - rm -rf ~/Library/Developer/Xcode/DerivedData/\*
+  - rm -rf ~/Library/Developer/Xcode/Archives/\*
+  - rm -rf ./ios/build
+
+- `-a`:
+
+  - ./android/gradlew clean
+  - rm -rf ./android/build
+  - rm -rf ./android/app/build
+  - rm ./android/.idea/modules.xml
+  - rm ./android/\*\*/\*.iml
+
+- `-j`:
+
+  - watchman watch-del-all
+  - rm -rf /tmp/haste-map-react-native-packager-\*
+  - rm -rf /tmp/metro-bundler-cache-\*
+  - yarn cache clean
+  - rm -rf ~/.rncache
+
+- `-p`:
+
+  - rm -rf ./ios/Pods
+  - bundle exec pod install
+
+- `-m`:
+  - rm -rf ./node_modules
+  - yarn install
+
+## License
+
+MIT
