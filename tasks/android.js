@@ -16,9 +16,12 @@ module.exports = function() {
   shell.rm("android/.idea/modules.xml");
 
   console.log("\n* Delete .iml files".android);
-  shell.find("android").filter(function(file) {
-    if (file.match(/\.iml$/)) {
-      shell.rm(file);
-    }
-  });
+  imlFiles = shell.find("android") || [];
+  if (imlFiles.code !== 1) {
+    imlFiles.filter(function(file) {
+      if (file.match(/\.iml$/)) {
+        shell.rm(file);
+      }
+    });
+  }
 };
