@@ -36,6 +36,11 @@ program
   .option("--all", "Clear everything")
   .parse(process.argv);
 
+if (process.argv.length === 2) {
+  console.log("You must specify one argument.");
+  console.log("For help, use --help");
+}
+
 const { ios, android, javascript, modules, pods, all } = program;
 
 if (all || javascript) jsTask();
