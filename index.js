@@ -7,6 +7,7 @@ const iosTask = require("./tasks/ios");
 const androidTask = require("./tasks/android");
 const nodeModulesTask = require("./tasks/modules");
 const podsTask = require("./tasks/pods");
+const jestTask = require("./tasks/jest");
 const PKG = require("./package.json");
 const program = require("commander");
 
@@ -18,7 +19,8 @@ colors.setTheme({
   ios: "cyan",
   android: "green",
   modules: "blue",
-  pods: "magenta"
+  pods: "magenta",
+  jest: "magenta"
 });
 
 /**
@@ -33,6 +35,7 @@ program
   .option("-j, --javascript", "Clear Javascript")
   .option("-m, --modules", "Clear and install fresh node modules")
   .option("-p, --pods", "Clear and install fresh pods")
+  .option("-c, --jest", "Clear jest cache")
   .option("--all", "Clear everything")
   .parse(process.argv);
 
@@ -41,10 +44,11 @@ if (process.argv.length === 2) {
   console.log("For help, use --help");
 }
 
-const { ios, android, javascript, modules, pods, all } = program;
+const { ios, android, javascript, modules, pods, jest, all } = program;
 
 if (all || javascript) jsTask();
 if (all || ios) iosTask();
 if (all || android) androidTask();
 if (all || modules) nodeModulesTask();
 if (all || pods) podsTask();
+if (all || jest) jestTask();
