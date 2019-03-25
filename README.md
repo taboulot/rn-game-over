@@ -52,8 +52,13 @@ $ npm install -g rn-game-over
   - bundle exec pod install
 
 - `-m`:
+
   - rm -rf ./node_modules
   - yarn install
+
+- `-c`:
+
+  - yarn jest --clearCache
 
 ## License
 
