@@ -1,4 +1,5 @@
 const shell = require("shelljs");
+const DEPENDENCY_MANAGER = require("../helpers/dependencyManager");
 
 module.exports = function() {
   console.log("## Javascript clean ##".bold.underline.javascript);
@@ -12,8 +13,8 @@ module.exports = function() {
   console.log("\n* rm -rf /tmp/metro-bundler-cache-*".javascript);
   shell.rm("-rf", "/tmp/metro-bundler-cache-*");
 
-  console.log("\n* yarn clean cache".javascript);
-  shell.exec("yarn cache clean", { async: false });
+  console.log(`\n* ${DEPENDENCY_MANAGER} clean cache`.javascript);
+  shell.exec(`${DEPENDENCY_MANAGER} cache clean`, { async: false });
 
   console.log("\n* rm -rf ~/.rncache".javascript);
   shell.rm("-rf", "~/.rncache");

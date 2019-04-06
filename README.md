@@ -22,6 +22,10 @@ With npm, run
 $ npm install -g rn-game-over
 ```
 
+## Dependency manager
+
+This script has command support for both [npm](https://docs.npmjs.com/cli/npm) and [yarn](https://yarnpkg.com/lang/en/).
+
 ## Options descriptions
 
 - `-o`:
@@ -43,7 +47,7 @@ $ npm install -g rn-game-over
   - watchman watch-del-all
   - rm -rf /tmp/haste-map-react-native-packager-\*
   - rm -rf /tmp/metro-bundler-cache-\*
-  - yarn cache clean
+  - *<DEPENDENCY_MANAGER>* cache clean
   - rm -rf ~/.rncache
 
 - `-p`:
@@ -54,11 +58,11 @@ $ npm install -g rn-game-over
 - `-m`:
 
   - rm -rf ./node_modules
-  - yarn install
+  - *<DEPENDENCY_MANAGER>* install
 
 - `-c`:
 
-  - yarn jest --clearCache
+  - *<DEPENDENCY_MANAGER>* jest --clearCache
 
 ## License
 
