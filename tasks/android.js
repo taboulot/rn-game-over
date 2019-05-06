@@ -4,7 +4,7 @@ module.exports = function() {
   console.log("\n## Android clean ##".bold.underline.android);
 
   console.log("\n* ./android/gradlew clean".android);
-  shell.exec(" ./android/gradlew clean");
+  shell.exec("cd android; ./gradlew clean; cd ..");
 
   console.log("\n* rm -rf android/build".android);
   shell.rm("-rf", "./android/build");
