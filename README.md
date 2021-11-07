@@ -45,9 +45,9 @@ This script has command support for both [npm](https://docs.npmjs.com/cli/npm) a
 - `-j`:
 
   - watchman watch-del-all
-  - rm -rf /tmp/haste-map-react-native-packager-\*
-  - rm -rf /tmp/metro-bundler-cache-\*
-  - *<DEPENDENCY_MANAGER>* cache clean
+  - rm -rf $TMPDIR/haste-map-react-native-packager-\*
+  - rm -rf $TMPDIR/metro-bundler-cache-\*
+  - _<DEPENDENCY_MANAGER>_ cache clean
   - rm -rf ~/.rncache
 
 - `-p`:
@@ -58,11 +58,11 @@ This script has command support for both [npm](https://docs.npmjs.com/cli/npm) a
 - `-m`:
 
   - rm -rf ./node_modules
-  - *<DEPENDENCY_MANAGER>* install
+  - _<DEPENDENCY_MANAGER>_ install
 
 - `-c`:
 
-  - *<DEPENDENCY_MANAGER>* jest --clearCache
+  - _<DEPENDENCY_MANAGER>_ jest --clearCache
 
 ## License
 
