@@ -1,6 +1,6 @@
 const shell = require("shelljs");
 
-module.exports = function() {
+module.exports = function({ install }) {
   console.log("## Pods clean ##".bold.underline.pods);
 
   shell.cd("ios");
@@ -8,8 +8,10 @@ module.exports = function() {
   console.log("\n* Pods Clean".pods);
   shell.exec("rm -rf Pods", { async: false });
 
-  console.log("\n* Install Pods ".pods);
-  shell.exec("bundle exec pod install", { async: false });
+  if (install) {
+    console.log("\n* Install Pods ".pods);
+    shell.exec("bundle exec pod install", { async: false });
+  }
 
   shell.cd("..");
 };
