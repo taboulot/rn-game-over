@@ -11,6 +11,9 @@ module.exports = function() {
 
   console.log("\n* rm -rf android/app/build".android);
   shell.rm("-rf", "./android/app/build");
+  
+  console.log("\n* rm -rf android/.gradle".android);
+  shell.rm("-rf", "./android/.gradle");
 
   console.log("\n* rm -rf android/.idea/modules.xml".android);
   shell.rm("android/.idea/modules.xml");

@@ -39,6 +39,7 @@ This script has command support for both [npm](https://docs.npmjs.com/cli/npm) a
   - ./android/gradlew clean
   - rm -rf ./android/build
   - rm -rf ./android/app/build
+  - rm -rf android/.gradle
   - rm ./android/.idea/modules.xml
   - rm ./android/\*\*/\*.iml
 
