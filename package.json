@@ -13,5 +13,19 @@
   },
   "bin": {
     "rn-game-over": "./index.js"
+  },
+  "scripts": {
+    "release": "release-it"
+  },
+  "release-it": {
+    "git": {
+      "commitMessage": "chore: release v${version}"
+    },
+    "github": {
+      "release": true
+    }
+  },
+  "devDependencies": {
+    "release-it": "^15.0.0"
   }
 }
