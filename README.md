@@ -65,6 +65,14 @@ This script has command support for both [npm](https://docs.npmjs.com/cli/npm) a
 
   - _<DEPENDENCY_MANAGER>_ jest --clearCache
 
+## Contributors
+
+<a href="https://github.com/taboulot/rn-game-over/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=taboulot/rn-game-over" />
+</a>
+
+Made with [contrib.rocks](https://contrib.rocks).
+
 ## License
 
 MIT
