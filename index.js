@@ -37,6 +37,7 @@ program
   .option("-p, --pods", "Clear and install fresh pods")
   .option("-c, --jest", "Clear jest cache")
   .option("--all", "Clear everything")
+  .option("--no-install", "Disable node modules & pods installation")
   .parse(process.argv);
 
 if (process.argv.length === 2) {
@@ -44,11 +45,11 @@ if (process.argv.length === 2) {
   console.log("For help, use --help");
 }
 
-const { ios, android, javascript, modules, pods, jest, all } = program;
+const { ios, android, javascript, modules, pods, jest, all, install } = program;
 
 if (all || javascript) jsTask();
 if (all || ios) iosTask();
 if (all || android) androidTask();
-if (all || modules) nodeModulesTask();
-if (all || pods) podsTask();
+if (all || modules) nodeModulesTask({ install });
+if (all || pods) podsTask({ install });
 if (all || jest) jestTask();
