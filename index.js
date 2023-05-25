@@ -49,7 +49,7 @@ const { ios, android, javascript, modules, pods, jest, all, install } = program;
 
 if (all || javascript) jsTask();
 if (all || ios) iosTask();
-if (all || android) androidTask();
 if (all || modules) nodeModulesTask({ install });
+if (all || android) androidTask();
 if (all || pods) podsTask({ install });
 if (all || jest) jestTask();
